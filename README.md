@@ -7,3 +7,6 @@ dunetpc v09_26_00 using directories available on one of the DUNE
 build nodes.  mytest11build_newdev.sh checks out the unsplit
 dunetpc code, and splitall.sh splits and builds as it goes along.
 
+The make* scripts assume everything's been installed in the user's ~/split directory.
+It's not very portable, but is meant for a one-time use.
+
