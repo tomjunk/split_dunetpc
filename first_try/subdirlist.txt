@@ -1,0 +1,74 @@
+build order       tests ran?
+dunecore          yes
+duneopdet         no tests were found
+dunesim           yes
+dunecalib         no tests were found
+duneprototypes    yes
+dunedataprep      yes
+dunereco          no tests were found
+duneana           no tests were found
+duneexamples      yes
+dunesw            yes
+
+environment variables set in dunetpc's product_deps
+
+Directory          Status
+
+3x1x1dp               duneprototypes
+APAIO                 do not migrate
+AnaTree               duneana
+AnaUtils              dunereco
+ArtSupport            dunecore
+BeamData              duneprototypes
+CAFMaker              duneana
+CFilter               do not migrate
+CVN                   dunereco
+CalData               dunedataprep
+Calib                 dunecalib
+CalibServices         dunecalib
+ClusterFinderDUNE     dunereco
+DAQSimAna             duneana
+DAQTriggerSim         dunecore
+DUNEPandora           dunereco
+DUNEWireCell          dunereco
+Daq                   do not migrate
+DataPrep              dunedataprep
+DetSim                dunesim
+DetectorVariations    dunesim
+DuneCommon            dunecore
+DuneExample           duneexamples
+DuneInterface         dunecore
+DuneObj               dunecore
+DuneObjDumpers        dunecore
+DuneServiceAccess     dunecore
+EnergyStudies         duneana
+EventFilters          duneana
+EventGenerator        dunesim
+FDSensOpt             dunereco
+GalleryScripts        duneexamples
+Geometry              dunecore
+HitAnalysis           duneana
+HitFinderDUNE         dunereco
+Iceberg               duneprototypes
+InfillChannels        dunereco
+LArG4                 dunesim
+OpticalDetector       duneopdet
+PandoraAnalysis       duneana
+PhotonPropagation     dunesim
+ProductFilters        duneana
+Protodune             duneprototypes
+RecoAlgDUNE           dunereco
+RegCNN                dunereco
+SNSlicer              dunereco -- but not built (as per dunetpc)
+SNUtils               dunereco -- but not built (as per dunetpc)
+ShowerAna             duneana
+SimFilter             dunesim
+Simulation            dunesim
+SpaceCharge           dunesim
+SpaceChargeServices   dunesim
+SupernovaAna          duneana
+TrackFinderDUNE       dunereco
+TrackPID              dunereco
+TrackingAna           duneana
+Utilities             dunecore
+VLNets                dunereco

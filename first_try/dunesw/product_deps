@@ -1,0 +1,61 @@
+# This @product_deps@ file defines dependencies for this package.
+
+# The *parent* line must the first non-commented line and defines this product and version
+# The version must be of the form vxx_yy_zz (e.g. v01_02_03).
+
+parent dunesw v09_26_00
+
+defaultqual e20
+
+# These optional lines define where headers, libraries, and executables go and should
+# be used only if your product does not conform to the defaults.
+# Format: directory_type directory_path directory_name
+#   where directory_type is one of incdir, libdir, or bindir
+#   where directory_path is one of product_dir, fq_dir and -
+# Defaults:
+#incdir  product_dir  include
+#fcldir  product_dir  fcl
+#libdir  fq_dir       lib
+#bindir  fq_dir       bin
+
+table_fragment_begin
+    pathPrepend(FW_SEARCH_PATH, /cvmfs/dune.osgstorage.org/pnfs/fnal.gov/usr/dune/persistent/stash/)
+    pathPrepend(FHICL_FILE_PATH, .:./job)
+    envSet(DBIQEURL, http://dbdata0vm.fnal.gov:9090/QE/dune)
+    envSet(DBIUSER, pdunesp_reader)
+    envSet(DBIHOST, ifdbprod.fnal.gov)
+    envSet(DBIWSURL, https://dbdata0vm.fnal.gov:9443/dune_con_prod/app/)
+    envSet(DBINAME, pdunesp_prod)
+    envSet(DBIWSURLPUT, https://dbdata0vm.fnal.gov:9443/dune_con_prod/app/)
+    envSet(DBIPORT, 5451)
+    envSet(DBIWSURLINT, https://dbdata0vm.fnal.gov:9443/dune_con_prod/app/)
+table_fragment_end
+
+# With "product  version" table below, we now define depdendencies
+
+# Add the dependent product and version
+
+product          version
+cetbuildtools	 v7_17_01	-	only_for_build
+duneexamples     v09_26_00
+dunedataprep     v09_26_00
+duneprototypes   v09_26_00
+duneana          v09_26_00
+end_product_list
+
+
+# We now define allowed qualifiers and the corresponding qualifiers for the depdencies.
+# Make a table by adding columns before "notes".
+qualifier       duneexamples   dunedataprep  duneana   duneprototypes     notes
+c7:debug        c7:debug       c7:debug      c7:debug  c7:debug         
+c7:prof         c7:prof        c7:prof       c7:prof   c7:prof          
+e20:debug       e20:debug      e20:debug     e20:debug e20:debug        
+e20:prof        e20:prof       e20:prof      e20:prof  e20:prof         
+end_qualifier_list
+
+# Preserve tabs and formatting in emacs and vi / vim:
+
+### Local Variables:
+### tab-width: 8
+### End:
+

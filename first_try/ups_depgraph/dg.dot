@@ -1,0 +1,27 @@
+digraph G {
+dunesw -> duneprototypes
+dunesw -> duneexamples
+dunesw -> dunedataprep
+dunesw -> duneana
+dunesw -> duneutil
+dunecore -> dune_pardata
+dunesim -> genie_xsec
+dunesim -> genie_phyopt
+dunecore -> dune_oslibs
+duneana -> dunereco
+duneana -> duneopdet
+duneana -> nusystematics
+dunecalib -> dunecore
+dunecore -> dune_raw_data
+dunedataprep -> valgrind
+dunedataprep -> dunecore
+duneexamples -> dunecore 
+duneopdet -> dunecore 
+duneprototypes -> duneopdet 
+duneprototypes -> dunecalib
+duneprototypes -> dunesim
+dunereco -> dunecore
+dunereco -> hep_hpc
+dunesim -> dunecore
+dunecore -> larsoft
+}
