@@ -4,16 +4,12 @@
 
 
 # use cmake 3.14 or later
-cmake_minimum_required (VERSION 3.12...3.14 FATAL_ERROR)
+cmake_minimum_required (VERSION 3.19 FATAL_ERROR)
 
-project(duneopdet LANGUAGES CXX)
+project(duneopdet VERSION 09.36.00 LANGUAGES CXX)
 
 # cetbuildtools contains our cmake modules
 find_package(cetbuildtools REQUIRED)
-
-list(APPEND CMAKE_MODULE_PATH $ENV{CANVAS_ROOT_IO_DIR}/Modules)
-list(APPEND CMAKE_MODULE_PATH $ENV{ART_DIR}/Modules)
-
 
 include(CetCMakeEnv)
 cet_cmake_env()
@@ -35,11 +31,14 @@ find_ups_product( cetbuildtools )
 find_ups_product( larevt )
 find_ups_product( larsim )
 find_ups_product( larcore )
+find_ups_product( lardata )
+find_ups_product( lardataalg )
 find_ups_product( larreco )
 find_ups_product( larana )
 find_ups_product( larcorealg )
 find_ups_product( nurandom )
 find_ups_product( dunecore )
+find_ups_product( clhep )
 
 # macros for artdaq_dictionary and simple_plugin
 include(ArtDictionary)

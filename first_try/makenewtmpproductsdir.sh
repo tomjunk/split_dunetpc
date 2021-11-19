@@ -1,7 +1,6 @@
 #!/bin/sh
 
-TARGETDIR=/build/trj
-SPLITDIR=/build/trj/split_target
+source ./defvars.sh
 
 touch ${TARGETDIR}/splitproducts
 rm -rf ${TARGETDIR}/splitproducts

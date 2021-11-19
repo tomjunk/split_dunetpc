@@ -1,13 +1,11 @@
 #!/bin/sh
 
-UNSPLIT_SOURCE=/build/trj/splitter11/srcs
-SPLITTARGET=/build/trj/split_target/srcs
-SCRIPTDIR=/nashome/t/trj/split
+source ./defvars.sh
 
 cd $SPLITTARGET
 rm -rf *
 
-cp ~/split/dunereco/topCMakeLists.txt ./CMakeLists.txt
+cp ${SCRIPTDIR}/dunereco/topCMakeLists.txt ./CMakeLists.txt
 
 mkdir dunereco
 cd dunereco
@@ -15,13 +13,13 @@ mkdir ups
 cd ups
 cp $UNSPLIT_SOURCE/dunetpc/ups/* .
 rm ./product_deps
-cp ~/split/dunereco/product_deps ./product_deps
+cp ${SCRIPTDIR}/dunereco/product_deps ./product_deps
 cd ..
-cp ~/split/dunereco/CMakeLists.txt ./CMakeLists.txt
+cp ${SCRIPTDIR}/dunereco/CMakeLists.txt ./CMakeLists.txt
 cp -r $UNSPLIT_SOURCE/dunetpc/.gitignore .
 mkdir dunereco
 cd dunereco
-cp ~/split/dunereco/dunereco_CMakeLists.txt ./CMakeLists.txt
+cp ${SCRIPTDIR}/dunereco/dunereco_CMakeLists.txt ./CMakeLists.txt
 
 cp -r $UNSPLIT_SOURCE/dunetpc/dune/AnaUtils .
 cp -r $UNSPLIT_SOURCE/dunetpc/dune/ClusterFinderDUNE .

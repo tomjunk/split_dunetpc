@@ -3,10 +3,9 @@
 # ======================================================================
 
 
-# use cmake 3.14 or later
-cmake_minimum_required (VERSION 3.12...3.14 FATAL_ERROR)
+cmake_minimum_required (VERSION 3.19 FATAL_ERROR)
 
-project(dunecalib LANGUAGES CXX)
+project(dunecalib VERSION 09.36.00 LANGUAGES CXX)
 
 # cetbuildtools contains our cmake modules
 find_package(cetbuildtools REQUIRED)
@@ -33,6 +32,7 @@ find_ups_boost( )
 find_ups_root()
 find_ups_product( cetbuildtools )
 find_ups_product( larcore )
+find_ups_product( larcorealg )
 find_ups_product( nuevdb )
 find_ups_geant4( )
 

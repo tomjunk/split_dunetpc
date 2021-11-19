@@ -1,5 +1,6 @@
 add_subdirectory(ArtSupport)
 add_subdirectory(DuneInterface)
+include(dune::ToolTypes) # Enable simpler building of tools.
 add_subdirectory(Utilities)
 add_subdirectory(DuneServiceAccess)
 add_subdirectory(DAQTriggerSim)

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-LARSOFT_VERSION=v09_26_00
+LARSOFT_VERSION=v09_36_00
 COMPILER=e20
 DIRECTORY=splitter11
 USERNAME=`whoami`
@@ -18,7 +18,7 @@ mrb newDev -q ${COMPILER}:prof
 source ${HDIR}/${USERNAME}/${DIRECTORY}/localProducts*/setup
 mkdir work
 cd srcs
-mrb g dunetpc
+mrb g -t ${LARSOFT_VERSION} dunetpc
 
 cd $MRB_BUILDDIR
 mrbsetenv

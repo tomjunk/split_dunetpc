@@ -1,13 +1,11 @@
 #!/bin/sh
 
-UNSPLIT_SOURCE=/build/trj/splitter11/srcs
-SPLITTARGET=/build/trj/split_target/srcs
-SCRIPTDIR=/nashome/t/trj/split
+source ./defvars.sh
 
 cd $SPLITTARGET
 rm -rf *
 
-cp ~/split/dunesim/topCMakeLists.txt ./CMakeLists.txt
+cp ${SCRIPTDIR}/dunesim/topCMakeLists.txt ./CMakeLists.txt
 
 mkdir dunesim
 cd dunesim
@@ -15,13 +13,13 @@ mkdir ups
 cd ups
 cp $UNSPLIT_SOURCE/dunetpc/ups/* .
 rm ./product_deps
-cp ~/split/dunesim/product_deps ./product_deps
+cp ${SCRIPTDIR}/dunesim/product_deps ./product_deps
 cd ..
-cp ~/split/dunesim/CMakeLists.txt ./CMakeLists.txt
+cp ${SCRIPTDIR}/dunesim/CMakeLists.txt ./CMakeLists.txt
 cp -r $UNSPLIT_SOURCE/dunetpc/.gitignore .
 mkdir dunesim
 cd dunesim
-cp ~/split/dunesim/dunesim_CMakeLists.txt ./CMakeLists.txt
+cp ${SCRIPTDIR}/dunesim/dunesim_CMakeLists.txt ./CMakeLists.txt
 
 cp -r $UNSPLIT_SOURCE/dunetpc/dune/DetSim .
 cp -r $UNSPLIT_SOURCE/dunetpc/dune/Simulation .

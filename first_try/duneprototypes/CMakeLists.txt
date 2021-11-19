@@ -2,11 +2,9 @@
 #  duneprototypes main build file
 # ======================================================================
 
+cmake_minimum_required (VERSION 3.19 FATAL_ERROR)
 
-# use cmake 3.14 or later
-cmake_minimum_required (VERSION 3.12...3.14 FATAL_ERROR)
-
-project(duneprototypes LANGUAGES CXX)
+project(duneprototypes VERSION 09.36.00 LANGUAGES CXX)
 
 # cetbuildtools contains our cmake modules
 find_package(cetbuildtools REQUIRED)
@@ -26,21 +24,42 @@ cet_set_compiler_flags(DIAGS CAUTIOUS
 
 cet_report_compiler_flags()
 
+find_ups_boost( )
 find_ups_product( art )
 find_ups_product( art_root_io )
 find_ups_product( canvas_root_io )
-find_ups_boost( )
 find_ups_root()
 find_ups_product( cetbuildtools )
 find_ups_product( larcore )
+find_ups_product( larcorealg )
 find_ups_product( larpandora )
 find_ups_product( dunecore )
 find_ups_product( lardataobj )
+find_ups_product( lardataalg )
 find_ups_product( lardata )
+find_ups_product( larevt )
 find_ups_product( duneopdet )
 find_ups_product( dunecalib )
 find_ups_product( dunesim )
+find_ups_product( nusimdata )
+find_ups_product( dune_raw_data )
+find_ups_product( artdaq_core )
+find_ups_product( clhep )
+find_ups_product( hdf5 )
+find_ups_product( dunedaqdataformats )
+find_ups_product( dunedetdataformats )
 find_ups_geant4( )
+
+# artdaq_core Utility library
+cet_find_library( ARTDAQ-CORE_UTILITIES NAMES artdaq-core_Utilities PATHS ENV ARTDAQ_CORE_LIB )
+
+string(TOUPPER ${CMAKE_BUILD_TYPE} BTYPE_UC )
+if( ${BTYPE_UC} MATCHES "DEBUG" )
+ find_library( LIBHDF5 NAMES hdf5_debug PATHS ENV HDF5_LIB NO_DEFAULT_PATH)
+else()
+ find_library( LIBHDF5 NAMES hdf5 PATHS ENV HDF5_LIB NO_DEFAULT_PATH)
+endif()
+include_directories(${HDF5_INCLUDE_DIRS})
 
 # macros for artdaq_dictionary and simple_plugin
 include(ArtDictionary)
