@@ -31,7 +31,7 @@ done
 #  duneprototypes fixes
 #-------------------
 
-for dname in Protodune Iceberg VDColdbox; do
+for dname in Protodune Iceberg Coldbox; do
   for exname in cc cxx h hh cpp; do
     find . -type f -name "*.${exname}" -exec sed -i s"@dune/${dname}@duneprototypes/${dname}@" {} +
   done

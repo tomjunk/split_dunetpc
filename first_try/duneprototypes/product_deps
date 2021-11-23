@@ -3,7 +3,7 @@
 # The *parent* line must the first non-commented line and defines this product and version
 # The version must be of the form vxx_yy_zz (e.g. v01_02_03).
 
-parent duneprototypes v09_36_00
+parent duneprototypes v09_37_01
 
 defaultqual e20
 
@@ -26,9 +26,9 @@ fwdir	product_dir	config_data
 
 product                 version
 cetbuildtools	        v8_18_05	-	only_for_build
-duneopdet               v09_36_00
-dunecalib               v09_36_00
-dunesim                 v09_36_00
+duneopdet               v09_37_01
+dunecalib               v09_37_01
+dunesim                 v09_37_01
 dunedetdataformats      v3_1_0
 dunedaqdataformats      v3_1_0
 end_product_list

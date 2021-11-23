@@ -2,7 +2,7 @@
 
 source ./defvars.sh
 
-LARSOFT_VERSION=v09_36_00
+LARSOFT_VERSION=v09_37_01
 COMPILER=e20
 DIRECTORY=splitter11
 USERNAME=`whoami`
