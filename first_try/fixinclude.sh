@@ -4,7 +4,7 @@
 #  dunecore fixes
 #-------------------
 
-for dname in ArtSupport DuneInterface Utilities DAQTriggerSim DuneServiceAccess Geometry DuneCommon DuneObj; do
+for dname in ArtSupport DuneInterface Utilities DAQTriggerSim DuneServiceAccess Geometry DuneCommon DuneObj HDF5Utils; do
   for exname in cc cxx h hh cpp; do
     find . -type f -name "*.${exname}" -exec sed -i s"@dune/${dname}@dunecore/${dname}@" {} +
   done
@@ -23,7 +23,8 @@ for libname in SignalShapingServiceDUNE_service \
                SignalShapingServiceDUNEDPhase_service \
                SignalShapingServiceDUNE10kt_service \
                SignalShapingServiceDUNE35t_service \
-               CrpGainService_service; do
+               CrpGainService_service \
+               HDF5Utils; do
   find . -type f -name "CMakeLists.txt" -exec sed -i s"@${libname}@dunecore::${libname}@" {} +
 done
 

@@ -2,7 +2,7 @@
 source ./defvars.sh
 
 source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
-source ${SPLITDIR}/localProducts*/setup
 export PRODUCTS=${SPLITPRODUCTS}:${PRODUCTS}
+source ${SPLITDIR}/localProducts*/setup
 cd ${MRB_BUILDDIR}
 mrbsetenv

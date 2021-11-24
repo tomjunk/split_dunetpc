@@ -3,6 +3,7 @@
 source ./defvars.sh
 
 LARSOFT_VERSION=v09_37_01
+TAGSUFFIX=_trj23nov2021
 COMPILER=e20
 DIRECTORY=splitter11
 USERNAME=`whoami`
@@ -19,7 +20,7 @@ mrb newDev -q ${COMPILER}:prof
 source ${TARGETDIR}/${DIRECTORY}/localProducts*/setup
 mkdir work
 cd srcs
-mrb g -t ${LARSOFT_VERSION} dunetpc
+mrb g -t ${LARSOFT_VERSION}${TAGSUFFIX} dunetpc
 
 cd $MRB_BUILDDIR
 mrbsetenv
