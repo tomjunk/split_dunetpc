@@ -27,6 +27,7 @@ CalData               dunedataprep
 Calib                 dunecalib
 CalibServices         dunecalib
 ClusterFinderDUNE     dunereco
+Coldbox               duneprototypes
 DAQSimAna             duneana
 DAQTriggerSim         dunecore
 DUNEPandora           dunereco
@@ -49,6 +50,7 @@ GalleryScripts        duneexamples
 Geometry              dunecore
 HitAnalysis           duneana
 HitFinderDUNE         dunereco
+HDF5Utils             dunecore
 Iceberg               duneprototypes
 InfillChannels        dunereco
 LArG4                 dunesim
@@ -72,4 +74,3 @@ TrackPID              dunereco
 TrackingAna           duneana
 Utilities             dunecore
 VLNets                dunereco
-Coldbox             duneprototypes
