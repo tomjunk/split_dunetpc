@@ -23,10 +23,11 @@ for libname in SignalShapingServiceDUNE_service \
                SignalShapingServiceDUNEDPhase_service \
                SignalShapingServiceDUNE10kt_service \
                SignalShapingServiceDUNE35t_service \
-               CrpGainService_service \
-               HDF5Utils; do
+               CrpGainService_service ; do
   find . -type f -name "CMakeLists.txt" -exec sed -i s"@${libname}@dunecore::${libname}@" {} +
 done
+
+find . -type f -wholename "*Coldbox/vd/CMakeLists.txt" -exec sed -i s"@HDF5Utils@dunecore::HDF5Utils@" {} +
 
 #-------------------
 #  duneprototypes fixes
