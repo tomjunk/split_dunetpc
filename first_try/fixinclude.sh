@@ -29,6 +29,8 @@ done
 
 find . -type f -wholename "*Coldbox/vd/CMakeLists.txt" -exec sed -i s"@HDF5Utils@dunecore::HDF5Utils@" {} +
 
+find . -type f -wholename "*Coldbox/hd/CMakeLists.txt" -exec sed -i s"@HDF5Utils@dunecore::HDF5Utils@" {} +
+
 #-------------------
 #  duneprototypes fixes
 #-------------------
