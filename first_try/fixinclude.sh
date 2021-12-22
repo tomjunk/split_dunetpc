@@ -46,7 +46,7 @@ done
 #  duneopdet fixes.  This one's different as there's only one directory in it
 #-------------------
 
-for dname in OpticalDetector ; do
+for dname in OpticalDetector PhotonPropagation; do
   for exname in cc cxx h hh cpp; do
     find . -type f -name "*.${exname}" -exec sed -i s"@dune/${dname}@duneopdet/${dname}@" {} +
   done
@@ -57,7 +57,7 @@ done
 #  dunesim fixes
 #-------------------
 
-for dname in DetSim Simulation EventGenerator SpaceCharge SpaceChargeServices SimFilter PhotonPropagation DAQTriggerSim DetectorVariations LArG4; do
+for dname in DetSim Simulation EventGenerator SpaceCharge SpaceChargeServices SimFilter DAQTriggerSim DetectorVariations LArG4; do
   for exname in cc cxx h hh cpp; do
     find . -type f -name "*.${exname}" -exec sed -i s"@dune/${dname}@dunesim/${dname}@" {} +
   done

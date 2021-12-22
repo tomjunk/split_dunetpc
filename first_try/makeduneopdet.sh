@@ -22,6 +22,7 @@ cd duneopdet
 cp ${SCRIPTDIR}/duneopdet/duneopdet_CMakeLists.txt ./CMakeLists.txt
 
 cp -r $UNSPLIT_SOURCE/dunetpc/dune/OpticalDetector .
+cp -r $UNSPLIT_SOURCE/dunetpc/dune/PhotonPropagation .
 
 ${SCRIPTDIR}/fixinclude.sh
 

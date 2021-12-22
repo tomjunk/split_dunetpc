@@ -56,7 +56,7 @@ InfillChannels        dunereco
 LArG4                 dunesim
 OpticalDetector       duneopdet
 PandoraAnalysis       duneana
-PhotonPropagation     dunesim
+PhotonPropagation     duneopdet
 ProductFilters        duneana
 Protodune             duneprototypes
 RecoAlgDUNE           dunereco
