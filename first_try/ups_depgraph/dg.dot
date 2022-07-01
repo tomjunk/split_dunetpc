@@ -1,19 +1,21 @@
 digraph G {
-dunesw -> duneprototypes
 dunesw -> duneexamples
 dunesw -> dunedataprep
 dunesw -> duneana
-dunesw -> duneutil
+dunecore -> duneutil
+dunesw -> protoduneana
+protoduneana -> duneprototypes
+protoduneana -> geant4reweight
 dunecore -> dune_pardata
 dunesim -> genie_xsec
 dunesim -> genie_phyopt
 dunecore -> dune_oslibs
 duneana -> dunereco
 duneana -> duneopdet
-duneana -> nusystematics
+dunecore -> nusystematics
 dunecalib -> dunecore
-dunecore -> dune_raw_data
-dunedataprep -> valgrind
+dunecore -> dunepdlegacy
+dunecore -> valgrind
 dunedataprep -> dunecore
 duneexamples -> dunecore 
 duneopdet -> dunecore 
@@ -23,5 +25,7 @@ duneprototypes -> dunesim
 dunereco -> dunecore
 dunereco -> hep_hpc
 dunesim -> dunecore
+dunecore -> dunedaqdataformats
+dunecore -> dunedetdataformats
 dunecore -> larsoft
 }
